@@ -14,8 +14,10 @@ public class CountryMapper implements Mapper<Country, CountryDto> {
   @Override
   public CountryDto mapTo(Country country) {
     var dto = new CountryDto();
+    dto.setId(country.getCountryId());
     dto.setName(country.getName());
     dto.setArea(country.getArea());
+    dto.setCountryCode2(country.getCountryCode2());
     dto.setCountryCode3(country.getCountryCode3());
     dto.setLanguages(country.getCountryLanguages().stream().map(countryLanguage -> countryLanguage.getLanguage().getLanguage()).collect(Collectors.toList()));
     dto.setCountryStats(countryStatsMapper.mapTo(country.yearWithBiggerGdpPopulationRation()));

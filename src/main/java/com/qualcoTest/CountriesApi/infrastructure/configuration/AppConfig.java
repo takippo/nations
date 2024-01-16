@@ -25,7 +25,7 @@ public class AppConfig {
   @Primary
   public ModelMapper modelMapper() {
     ModelMapper modelMapper = new ModelMapper();
-    //modelMapper.getConfiguration().setMatchingStrategy(STRICT);
+    modelMapper.getConfiguration().setMatchingStrategy(STRICT);
     return modelMapper;
   }
 

@@ -12,5 +12,4 @@ public class CountryStatsDto {
   private int year;
   private int population;
   private double gdp;
-
 }

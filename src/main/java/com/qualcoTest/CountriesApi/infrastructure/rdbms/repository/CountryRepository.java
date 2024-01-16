@@ -7,6 +7,5 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface CountryRepository extends JpaRepository<Country, Integer> {
 
-  public List<Country> findAllByOrderByNameAsc();
-
+  List<Country> findAllByOrderByNameAsc();
 }

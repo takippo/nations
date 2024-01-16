@@ -24,11 +24,11 @@ public class CountryController {
 
   @GetMapping
   @CrossOrigin
-  public List<CountryDto> getCountries(){
+  public ResponseEntity<List<CountryDto>> getCountries(){
     var countries  = countryService.getCountries();
-    var countriesDtos = countries.stream().map(country -> countryMapper.mapTo(country)).collect(
+    var countriesDtos = countries.stream().map(countryMapper::mapTo).collect(
         Collectors.toList());
-    return countriesDtos;
+    return ResponseEntity.ok(countriesDtos);
   }
 
 }

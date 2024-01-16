@@ -25,9 +25,11 @@ import lombok.Setter;
 @NoArgsConstructor
 public class CountryDto {
 
+  private int id;
   private String name;
   private double area;
   private String countryCode3;
+  private String countryCode2;
   private List<String> languages;
   private CountryStatsDto countryStats;
 }
