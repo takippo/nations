@@ -21,6 +21,8 @@ public class CountryMapper implements Mapper<Country, CountryDto> {
     dto.setCountryCode3(country.getCountryCode3());
     dto.setLanguages(country.getCountryLanguages().stream().map(countryLanguage -> countryLanguage.getLanguage().getLanguage()).collect(Collectors.toList()));
     dto.setCountryStats(countryStatsMapper.mapTo(country.yearWithBiggerGdpPopulationRation()));
+    dto.setRegion(country.getRegion().getName());
+    dto.setContinent(country.getRegion().getContinent().getName());
     return dto;
   }
 

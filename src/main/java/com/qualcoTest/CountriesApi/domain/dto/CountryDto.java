@@ -31,5 +31,7 @@ public class CountryDto {
   private String countryCode3;
   private String countryCode2;
   private List<String> languages;
-  private CountryStatsDto countryStats;
+  private CountryStatsDto CountryStats;
+  private String region;
+  private String continent;
 }
